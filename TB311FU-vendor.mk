@@ -14,6 +14,10 @@ PRODUCT_SOONG_NAMESPACES += \
 # Proprietary copy files
 PRODUCT_COPY_FILES += \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    vendor/lenovo/TB311FU/proprietary/vendor/usr/idc/himax-touchscreen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/himax-touchscreen.idc \
+    vendor/lenovo/TB311FU/proprietary/vendor/usr/idc/NVT-ts.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVT-ts.idc \
+    vendor/lenovo/TB311FU/proprietary/vendor/etc/init/hw/init.connectivity.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.connectivity.rc \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_device_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device_configuration.xml \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_param/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_param/Speech_Param.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Speech_Param.xml \
@@ -119,3 +123,19 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_c2venc \
     libvcodec_utility \
     libvcodec_oal
+
+# Hardware Stabilization & Telephony Wakelock Suppression
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.radio.noril=yes \
+    ro.carrier=wifi-only \
+    telephony.lteOnCdmaDevice=0 \
+    ro.telephony.default_network=0 \
+    persist.radio.noril=1 \
+    persist.sys.phh.no_telephony=true \
+    config.disable_telephony=true \
+    persist.sys.phh.backlight54=1 \
+    persist.vendor.sys.pq.disp.aal.bypass=1 \
+    persist.vendor.audio.speaker.channels=4 \
+    persist.vendor.dfps.force_fps=90 \
+    debug.sf.latch_unsignaled=1
+

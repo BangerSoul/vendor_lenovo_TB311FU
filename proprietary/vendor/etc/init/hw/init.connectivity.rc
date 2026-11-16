@@ -1,0 +1,25 @@
+# ==============================================================================
+# Lenovo Tab M11 (TB311FU / 'poplar') - Modem Services Disabling
+# Requirement R5.2: Disable hardware modem daemons on Wi-Fi-only hardware
+# Target File: /vendor/etc/init/hw/init.connectivity.rc
+# ==============================================================================
+
+# MediaTek Modem Daemon Init (CCCI MDINIT)
+service ccci_mdinit /vendor/bin/ccci_mdinit 0
+    override
+    disabled
+
+# MediaTek File System Daemon for Modem (CCCI FSD)
+service ccci_fsd /vendor/bin/ccci_fsd 0
+    override
+    disabled
+
+# MediaTek Fusion RIL Daemon (RIL-DAEMON-MTK)
+service vendor.ril-daemon-mtk /vendor/bin/hw/mtkfusionrild -l libmtk-ril.so
+    override
+    disabled
+
+# Additional MediaTek RIL service alias fallback
+service mtk-ril /vendor/bin/hw/mtk-ril
+    override
+    disabled

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Lenovo Tab M11 (TB311FU) Audio Effects Configuration
+    Dolby Atmos Digital Audio Processing (DAP) & DRC Limiter Anti-Clipping
+    Targeting MediaTek MT6769 Smart Audio Amplifiers
+-->
+<audio_effects_conf version="2.0">
+    <libraries>
+        <!-- Standard AOSP Libraries -->
+        <library name="bundle" path="libbundlewrapper.so"/>
+        <library name="reverb" path="libreverbwrapper.so"/>
+        <library name="visualizer" path="libvisualizer.so"/>
+        <library name="downmix" path="libdownmix.so"/>
+        <library name="loudness_enhancer" path="libldnhncr.so"/>
+        <library name="dynamics_processing" path="libdynproc.so"/>
+
+        <!-- Hardware DRC Limiter and Dolby Atmos Libraries -->
+        <library name="drc" path="libdrc.so"/>
+        <library name="dolby" path="libdolby.so"/>
+        <library name="dap" path="libswdap.so"/>
+        <library name="spatializer" path="libspatializer.so"/>
+
+        <!-- Pre-processing effects library (AEC & NS) -->
+        <library name="pre_proc" path="libaudiopreprocessing.so"/>
+    </libraries>
+
+    <effects>
+        <effect name="bassboost" library="bundle" uuid="86314470-ff21-11df-ae61-0002a5d5c51b"/>
+        <effect name="virtualizer" library="bundle" uuid="1d4033c0-ff21-11df-b6a1-0002a5d5c51b"/>
+        <effect name="equalizer" library="bundle" uuid="ce772f20-847d-11df-bb17-0002a5d5c51b"/>
+        <effect name="volume" library="bundle" uuid="119341a0-8469-11df-81f9-0002a5d5c51b"/>
+        <effect name="reverb_env_aux" library="reverb" uuid="4a387fc0-8ab3-11df-8bad-0002a5d5c51b"/>
+        <effect name="reverb_env_ins" library="reverb" uuid="c7a511a0-a3bb-11df-860e-0002a5d5c51b"/>
+        <effect name="reverb_pre_aux" library="reverb" uuid="f29a1400-a3bb-11df-8b5c-0002a5d5c51b"/>
+        <effect name="reverb_pre_ins" library="reverb" uuid="172cfe00-a3bc-11df-a684-0002a5d5c51b"/>
+        <effect name="visualizer" library="visualizer" uuid="d069d9e0-8329-11df-9168-0002a5d5c51b"/>
+        <effect name="downmix" library="downmix" uuid="93f04452-e4fe-41cc-9124-7c76a476cce1"/>
+        <effect name="loudness_enhancer" library="loudness_enhancer" uuid="fa4110c0-6920-11e2-9722-0002a5d5c51b"/>
+        <effect name="dynamics_processing" library="dynamics_processing" uuid="e0e6539b-1781-7261-676f-22ce0404428c"/>
+
+        <!-- DRC Limiter for Dynamic Range Control & Anti-Clipping -->
+        <effect name="drc_limiter" library="drc" uuid="37cc2c00-dddd-11db-8577-0002a5d5c51b"/>
+
+        <!-- Hardware DSP Dolby Atmos Effects -->
+        <effect name="dolby_atmos" library="dolby" uuid="9d49200e-4714-494f-a2e2-f04c4f04d001"/>
+        <effect name="dap" library="dap" uuid="9d49200e-bb39-4ec2-a563-e4d79da1164b"/>
+
+        <!-- Android Spatializer Effect -->
+        <effect name="spatializer" library="spatializer" uuid="ccd4cf09-a79d-46c2-9aae-06a1698d6c8f"/>
+
+        <!-- Preprocessing Effects for Voice Communication Capture -->
+        <effect name="aec" library="pre_proc" uuid="bb392e80-94e0-11e0-aab8-0002a5d5c51b"/>
+        <effect name="ns" library="pre_proc" uuid="c06c8400-8e06-11e0-9cb6-0002a5d5c51b"/>
+    </effects>
+
+    <postprocess>
+        <stream type="music">
+            <apply effect="drc_limiter"/>
+            <apply effect="dolby_atmos"/>
+            <apply effect="dap"/>
+            <apply effect="spatializer"/>
+        </stream>
+        <stream type="ring">
+            <apply effect="drc_limiter"/>
+            <apply effect="dolby_atmos"/>
+            <apply effect="dap"/>
+        </stream>
+        <stream type="alarm">
+            <apply effect="drc_limiter"/>
+            <apply effect="dolby_atmos"/>
+            <apply effect="dap"/>
+        </stream>
+        <stream type="notification">
+            <apply effect="drc_limiter"/>
+            <apply effect="dolby_atmos"/>
+            <apply effect="dap"/>
+        </stream>
+    </postprocess>
+
+    <preprocess>
+        <stream type="voice_communication">
+            <apply effect="aec"/>
+            <apply effect="ns"/>
+        </stream>
+    </preprocess>
+</audio_effects_conf>
