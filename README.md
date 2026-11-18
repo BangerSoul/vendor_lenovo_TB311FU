@@ -24,6 +24,7 @@ The complete open-source software stack for the **Lenovo Tab M11** (`TB311FU`, c
 
 ## Branches
 
+- **`arrow-14.0`**: ArrowOS 14.0 (Android 14) dedicated proprietary vendor branch.
 - **`main`**: Master branch containing the latest Android 16 QPR2 / LineageOS 23.2 vendor assets and stabilization fixes.
 - **`lineage-23.2`**: Dedicated branch targeting LineageOS 23.2 (Android 16 QPR2 GSI / ROM) bringup and dynamic partition integration.
 - **`lineage-22.1`**: Stable baseline snapshot for LineageOS 22.1 (Android 15).
