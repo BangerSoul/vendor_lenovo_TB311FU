@@ -12,23 +12,6 @@ soong_namespace {
     ],
 }
 
-cc_prebuilt_binary {
-    name: "android.hardware.audio.service",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/hw/android.hardware.audio.service.mediatek"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
 cc_prebuilt_library_shared {
     name: "audio.primary.mt6768",
     owner: "lenovo",
@@ -39,25 +22,11 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/hw/audio.primary.mt6768.so"],
         },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio.primary.mt6768",
-    owner: "lenovo",
-    strip: {
-        none: true,
-    },
-    target: {
         android_arm: {
             srcs: ["proprietary/vendor/lib/hw/audio.primary.mt6768.so"],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "both",
     check_elf_files: false,
     prefer: true,
     soc_specific: true,
@@ -165,23 +134,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "android.hardware.camera.provider@2",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/hw/android.hardware.camera.provider@2.6-service-mediatek"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
 cc_prebuilt_library_shared {
     name: "camera.mt6768",
     owner: "lenovo",
@@ -192,25 +144,11 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/hw/camera.mt6768.so"],
         },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "camera.mt6768",
-    owner: "lenovo",
-    strip: {
-        none: true,
-    },
-    target: {
         android_arm: {
             srcs: ["proprietary/vendor/lib/hw/camera.mt6768.so"],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "both",
     check_elf_files: false,
     prefer: true,
     soc_specific: true,
@@ -522,23 +460,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "android.hardware.graphics.allocator@4",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
 cc_prebuilt_library_shared {
     name: "gralloc.mt6768",
     owner: "lenovo",
@@ -549,25 +470,11 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/hw/gralloc.mt6768.so"],
         },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "gralloc.mt6768",
-    owner: "lenovo",
-    strip: {
-        none: true,
-    },
-    target: {
         android_arm: {
             srcs: ["proprietary/vendor/lib/hw/gralloc.mt6768.so"],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "both",
     check_elf_files: false,
     prefer: true,
     soc_specific: true,
@@ -583,25 +490,11 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/egl/libGLES_mali.so"],
         },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libGLES_mali",
-    owner: "lenovo",
-    strip: {
-        none: true,
-    },
-    target: {
         android_arm: {
             srcs: ["proprietary/vendor/lib/egl/libGLES_mali.so"],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "both",
     check_elf_files: false,
     prefer: true,
     soc_specific: true,
@@ -617,25 +510,11 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libMaliPlatform.so"],
         },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libMaliPlatform",
-    owner: "lenovo",
-    strip: {
-        none: true,
-    },
-    target: {
         android_arm: {
             srcs: ["proprietary/vendor/lib/libMaliPlatform.so"],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "both",
     check_elf_files: false,
     prefer: true,
     soc_specific: true,
@@ -675,23 +554,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "android.hardware.graphics.composer@2",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/hw/android.hardware.graphics.composer@2.4-service"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
 cc_prebuilt_library_shared {
     name: "hwcomposer.mt6768",
     owner: "lenovo",
@@ -702,25 +564,11 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/hw/hwcomposer.mt6768.so"],
         },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "hwcomposer.mt6768",
-    owner: "lenovo",
-    strip: {
-        none: true,
-    },
-    target: {
         android_arm: {
             srcs: ["proprietary/vendor/lib/hw/hwcomposer.mt6768.so"],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "both",
     check_elf_files: false,
     prefer: true,
     soc_specific: true,
@@ -777,23 +625,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "android.hardware.sensors@2",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
 cc_prebuilt_library_shared {
     name: "sensors.mt6768",
     owner: "lenovo",
@@ -804,25 +635,11 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/hw/sensors.mt6768.so"],
         },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "sensors.mt6768",
-    owner: "lenovo",
-    strip: {
-        none: true,
-    },
-    target: {
         android_arm: {
             srcs: ["proprietary/vendor/lib/hw/sensors.mt6768.so"],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "both",
     check_elf_files: false,
     prefer: true,
     soc_specific: true,
@@ -875,23 +692,6 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "vendor.mediatek.hardware.power@2",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/hw/vendor.mediatek.hardware.power@2.1-service"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
     prefer: true,
     soc_specific: true,
 }
@@ -981,57 +781,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "thermal_manager",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/thermal_manager"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "thermalloadalgod",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/thermalloadalgod"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.bluetooth@1",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
 cc_prebuilt_library_shared {
     name: "android.hardware.bluetooth@1.1-impl-mediatek",
     owner: "lenovo",
@@ -1066,23 +815,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "android.hardware.wifi@1",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
 cc_prebuilt_library_shared {
     name: "libwifi-hal-mt6768",
     owner: "lenovo",
@@ -1100,23 +832,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "mnld",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/mnld"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
 cc_prebuilt_library_shared {
     name: "libmnl",
     owner: "lenovo",
@@ -1130,40 +845,6 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.drm@1.4-service",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.drm@1.4-service",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.clearkey"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
     prefer: true,
     soc_specific: true,
 }
@@ -1219,23 +900,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "teei_daemon",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/teei_daemon"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
 cc_prebuilt_library_shared {
     name: "libteec",
     owner: "lenovo",
@@ -1283,23 +947,6 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.media.c2@1",
-    owner: "lenovo",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    strip: {
-        none: true,
-    },
     prefer: true,
     soc_specific: true,
 }
@@ -1368,6 +1015,261 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.audio.service.mediatek",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/android.hardware.audio.service.mediatek"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.camera.provider@2.6-service-mediatek",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/android.hardware.camera.provider@2.6-service-mediatek"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.graphics.allocator@4.0-service-mediatek",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.graphics.composer@2.4-service",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/android.hardware.graphics.composer@2.4-service"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.sensors@2.0-service-mediatek",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.mediatek.hardware.power@2.1-service",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/vendor.mediatek.hardware.power@2.1-service"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "thermal_manager",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/thermal_manager"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "thermalloadalgod",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/thermalloadalgod"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.bluetooth@1.1-service-mediatek",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.wifi@1.0-service-mediatek",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "mnld",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/mnld"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.drm@1.4-service.widevine",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.drm@1.4-service.clearkey",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.clearkey"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "teei_daemon",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/teei_daemon"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.media.c2@1.2-mediatek",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
     prefer: true,
     soc_specific: true,
 }

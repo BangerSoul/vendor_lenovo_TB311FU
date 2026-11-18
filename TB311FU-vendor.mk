@@ -14,10 +14,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Proprietary copy files
 PRODUCT_COPY_FILES += \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    vendor/lenovo/TB311FU/proprietary/vendor/usr/idc/himax-touchscreen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/himax-touchscreen.idc \
-    vendor/lenovo/TB311FU/proprietary/vendor/usr/idc/NVT-ts.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVT-ts.idc \
-    vendor/lenovo/TB311FU/proprietary/vendor/etc/init/hw/init.connectivity.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.connectivity.rc \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_device_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device_configuration.xml \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_param/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_param/Speech_Param.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Speech_Param.xml \
@@ -51,7 +47,6 @@ PRODUCT_COPY_FILES += \
 
 # Proprietary packages to install
 PRODUCT_PACKAGES += \
-    android.hardware.audio.service \
     audio.primary.mt6768 \
     libaudiocompensationfilter \
     libaudiocomponentengine \
@@ -59,7 +54,6 @@ PRODUCT_PACKAGES += \
     libaudiodcrflt \
     libaudiosetting \
     libhaptic \
-    android.hardware.camera.provider@2 \
     camera.mt6768 \
     libcam.hal3a.v3 \
     libcam.halsensor \
@@ -79,63 +73,50 @@ PRODUCT_PACKAGES += \
     libmtkcam_tuning \
     libcamdrv_isp \
     libcamdrv_tuning \
-    android.hardware.graphics.allocator@4 \
     gralloc.mt6768 \
     libGLES_mali \
     libMaliPlatform \
     libgpudataproducer \
     libgpu_aux \
-    android.hardware.graphics.composer@2 \
     hwcomposer.mt6768 \
     libpq_prot \
     libpq_cust_base \
     libcolorx \
-    android.hardware.sensors@2 \
     sensors.mt6768 \
     libsensorndkutils \
     libhwm \
     libhfmanager \
-    vendor.mediatek.hardware.power@2 \
     vendor.mediatek.hardware.power@2.1-impl \
     libpowerhal \
     libperfservice \
     libperfmgr \
     libmtkperf_client \
-    thermal_manager \
-    thermalloadalgod \
-    android.hardware.bluetooth@1 \
     android.hardware.bluetooth@1.1-impl-mediatek \
     libbluetooth_mtk \
-    android.hardware.wifi@1 \
     libwifi-hal-mt6768 \
-    mnld \
     libmnl \
-    android.hardware.drm@1.4-service \
     libwvhidl \
     liboemcrypto \
     libwvdrmengine \
-    teei_daemon \
     libteec \
     liburee \
     libtz_uree \
-    android.hardware.media.c2@1 \
     libstagefright_soft_c2vdec \
     libstagefright_soft_c2venc \
     libvcodec_utility \
-    libvcodec_oal
-
-# Hardware Stabilization & Telephony Wakelock Suppression
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.radio.noril=yes \
-    ro.carrier=wifi-only \
-    telephony.lteOnCdmaDevice=0 \
-    ro.telephony.default_network=0 \
-    persist.radio.noril=1 \
-    persist.sys.phh.no_telephony=true \
-    config.disable_telephony=true \
-    persist.sys.phh.backlight54=1 \
-    persist.vendor.sys.pq.disp.aal.bypass=1 \
-    persist.vendor.audio.speaker.channels=4 \
-    persist.vendor.dfps.force_fps=90 \
-    debug.sf.latch_unsignaled=1
-
+    libvcodec_oal \
+    android.hardware.audio.service.mediatek \
+    android.hardware.camera.provider@2.6-service-mediatek \
+    android.hardware.graphics.allocator@4.0-service-mediatek \
+    android.hardware.graphics.composer@2.4-service \
+    android.hardware.sensors@2.0-service-mediatek \
+    vendor.mediatek.hardware.power@2.1-service \
+    thermal_manager \
+    thermalloadalgod \
+    android.hardware.bluetooth@1.1-service-mediatek \
+    android.hardware.wifi@1.0-service-mediatek \
+    mnld \
+    android.hardware.drm@1.4-service.widevine \
+    android.hardware.drm@1.4-service.clearkey \
+    teei_daemon \
+    android.hardware.media.c2@1.2-mediatek
