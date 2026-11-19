@@ -14,34 +14,14 @@ PRODUCT_SOONG_NAMESPACES += \
 # Proprietary copy files
 PRODUCT_COPY_FILES += \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_device_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device_configuration.xml \
+    vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_param/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
-    vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_param/Speech_Param.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Speech_Param.xml \
-    vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_param/Playback_Param.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Playback_Param.xml \
-    vendor/lenovo/TB311FU/proprietary/vendor/etc/camera/camera_hw_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_hw_configuration.xml \
+    vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_param/Speech_AudioParam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Speech_AudioParam.xml \
+    vendor/lenovo/TB311FU/proprietary/vendor/etc/audio_param/Playback_AudioParam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Playback_AudioParam.xml \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
-    vendor/lenovo/TB311FU/proprietary/vendor/etc/sensors/sensor_hub.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_hub.cfg \
-    vendor/lenovo/TB311FU/proprietary/vendor/etc/thermal_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_policy.conf \
-    vendor/lenovo/TB311FU/proprietary/vendor/etc/perfmgr/perf_boost_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perfmgr/perf_boost_config.xml \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
-    vendor/lenovo/TB311FU/proprietary/vendor/etc/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
-    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/mediatek-common.jar \
-    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-framework.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/mediatek-framework.jar \
-    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-ims-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/mediatek-ims-common.jar \
-    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-telephony-base.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/mediatek-telephony-base.jar \
-    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/mediatek-telephony-common.jar \
-    vendor/lenovo/TB311FU/proprietary/system_ext/lib64/libmtk_vt_service.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmtk_vt_service.so \
-    vendor/lenovo/TB311FU/proprietary/system_ext/lib64/libimsma.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libimsma.so \
-    vendor/lenovo/TB311FU/proprietary/system_ext/etc/permissions/mediatek-common.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/mediatek-common.xml \
-    vendor/lenovo/TB311FU/proprietary/system_ext/etc/permissions/mediatek-framework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/mediatek-framework.xml \
-    vendor/lenovo/TB311FU/proprietary/product/etc/permissions/com.lenovo.stylus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.lenovo.stylus.xml \
-    vendor/lenovo/TB311FU/proprietary/product/etc/sysconfig/lenovo_product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lenovo_product.xml \
-    vendor/lenovo/TB311FU/proprietary/product/media/audio/ui/Dock.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/Dock.ogg \
-    vendor/lenovo/TB311FU/proprietary/product/media/audio/ui/Undock.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/Undock.ogg \
-    vendor/lenovo/TB311FU/proprietary/odm/etc/camera/lenovo_sensor_calib.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/lenovo_sensor_calib.bin \
-    vendor/lenovo/TB311FU/proprietary/odm/etc/camera/tuning_params.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/tuning_params.bin \
-    vendor/lenovo/TB311FU/proprietary/odm/etc/display/panel_timing_tb311fu.xml:$(TARGET_COPY_OUT_ODM)/etc/display/panel_timing_tb311fu.xml
+    vendor/lenovo/TB311FU/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
 
 # Proprietary packages to install
 PRODUCT_PACKAGES += \
@@ -103,18 +83,8 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_c2venc \
     libvcodec_utility \
     libvcodec_oal \
-    android.hardware.audio.service.mediatek \
-    android.hardware.camera.provider@2.6-service-mediatek \
-    android.hardware.graphics.allocator@4.0-service-mediatek \
-    android.hardware.graphics.composer@2.4-service \
-    android.hardware.sensors@2.0-service-mediatek \
-    vendor.mediatek.hardware.power@2.1-service \
     thermal_manager \
     thermalloadalgod \
-    android.hardware.bluetooth@1.1-service-mediatek \
-    android.hardware.wifi@1.0-service-mediatek \
     mnld \
-    android.hardware.drm@1.4-service.widevine \
-    android.hardware.drm@1.4-service.clearkey \
     teei_daemon \
     android.hardware.media.c2@1.2-mediatek
