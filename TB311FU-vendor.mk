@@ -35,8 +35,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB311FU/proprietary/system_ext/lib64/libimsma.so:$(TARGET_COPY_OUT_VENDOR)/system_ext/lib64/libimsma.so \
     vendor/lenovo/TB311FU/proprietary/system_ext/etc/permissions/mediatek-common.xml:$(TARGET_COPY_OUT_VENDOR)/system_ext/etc/permissions/mediatek-common.xml \
     vendor/lenovo/TB311FU/proprietary/system_ext/etc/permissions/mediatek-framework.xml:$(TARGET_COPY_OUT_VENDOR)/system_ext/etc/permissions/mediatek-framework.xml \
-    vendor/lenovo/TB311FU/proprietary/product/overlay/LenovoSettingsOverlay.apk:$(TARGET_COPY_OUT_VENDOR)/product/overlay/LenovoSettingsOverlay.apk \
-    vendor/lenovo/TB311FU/proprietary/product/overlay/LenovoSystemUIOverlay.apk:$(TARGET_COPY_OUT_VENDOR)/product/overlay/LenovoSystemUIOverlay.apk \
     vendor/lenovo/TB311FU/proprietary/product/etc/permissions/com.lenovo.stylus.xml:$(TARGET_COPY_OUT_VENDOR)/product/etc/permissions/com.lenovo.stylus.xml \
     vendor/lenovo/TB311FU/proprietary/product/etc/sysconfig/lenovo_product.xml:$(TARGET_COPY_OUT_VENDOR)/product/etc/sysconfig/lenovo_product.xml \
     vendor/lenovo/TB311FU/proprietary/product/media/audio/ui/Dock.ogg:$(TARGET_COPY_OUT_VENDOR)/product/media/audio/ui/Dock.ogg \
