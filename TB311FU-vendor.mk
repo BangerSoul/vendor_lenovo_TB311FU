@@ -26,22 +26,22 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
-    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-common.jar:$(TARGET_COPY_OUT_VENDOR)/system_ext/framework/mediatek-common.jar \
-    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-framework.jar:$(TARGET_COPY_OUT_VENDOR)/system_ext/framework/mediatek-framework.jar \
-    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-ims-common.jar:$(TARGET_COPY_OUT_VENDOR)/system_ext/framework/mediatek-ims-common.jar \
-    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-telephony-base.jar:$(TARGET_COPY_OUT_VENDOR)/system_ext/framework/mediatek-telephony-base.jar \
-    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-telephony-common.jar:$(TARGET_COPY_OUT_VENDOR)/system_ext/framework/mediatek-telephony-common.jar \
-    vendor/lenovo/TB311FU/proprietary/system_ext/lib64/libmtk_vt_service.so:$(TARGET_COPY_OUT_VENDOR)/system_ext/lib64/libmtk_vt_service.so \
-    vendor/lenovo/TB311FU/proprietary/system_ext/lib64/libimsma.so:$(TARGET_COPY_OUT_VENDOR)/system_ext/lib64/libimsma.so \
-    vendor/lenovo/TB311FU/proprietary/system_ext/etc/permissions/mediatek-common.xml:$(TARGET_COPY_OUT_VENDOR)/system_ext/etc/permissions/mediatek-common.xml \
-    vendor/lenovo/TB311FU/proprietary/system_ext/etc/permissions/mediatek-framework.xml:$(TARGET_COPY_OUT_VENDOR)/system_ext/etc/permissions/mediatek-framework.xml \
-    vendor/lenovo/TB311FU/proprietary/product/etc/permissions/com.lenovo.stylus.xml:$(TARGET_COPY_OUT_VENDOR)/product/etc/permissions/com.lenovo.stylus.xml \
-    vendor/lenovo/TB311FU/proprietary/product/etc/sysconfig/lenovo_product.xml:$(TARGET_COPY_OUT_VENDOR)/product/etc/sysconfig/lenovo_product.xml \
-    vendor/lenovo/TB311FU/proprietary/product/media/audio/ui/Dock.ogg:$(TARGET_COPY_OUT_VENDOR)/product/media/audio/ui/Dock.ogg \
-    vendor/lenovo/TB311FU/proprietary/product/media/audio/ui/Undock.ogg:$(TARGET_COPY_OUT_VENDOR)/product/media/audio/ui/Undock.ogg \
-    vendor/lenovo/TB311FU/proprietary/odm/etc/camera/lenovo_sensor_calib.bin:$(TARGET_COPY_OUT_VENDOR)/odm/etc/camera/lenovo_sensor_calib.bin \
-    vendor/lenovo/TB311FU/proprietary/odm/etc/camera/tuning_params.bin:$(TARGET_COPY_OUT_VENDOR)/odm/etc/camera/tuning_params.bin \
-    vendor/lenovo/TB311FU/proprietary/odm/etc/display/panel_timing_tb311fu.xml:$(TARGET_COPY_OUT_VENDOR)/odm/etc/display/panel_timing_tb311fu.xml
+    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/mediatek-common.jar \
+    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-framework.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/mediatek-framework.jar \
+    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-ims-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/mediatek-ims-common.jar \
+    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-telephony-base.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/mediatek-telephony-base.jar \
+    vendor/lenovo/TB311FU/proprietary/system_ext/framework/mediatek-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/mediatek-telephony-common.jar \
+    vendor/lenovo/TB311FU/proprietary/system_ext/lib64/libmtk_vt_service.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmtk_vt_service.so \
+    vendor/lenovo/TB311FU/proprietary/system_ext/lib64/libimsma.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libimsma.so \
+    vendor/lenovo/TB311FU/proprietary/system_ext/etc/permissions/mediatek-common.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/mediatek-common.xml \
+    vendor/lenovo/TB311FU/proprietary/system_ext/etc/permissions/mediatek-framework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/mediatek-framework.xml \
+    vendor/lenovo/TB311FU/proprietary/product/etc/permissions/com.lenovo.stylus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.lenovo.stylus.xml \
+    vendor/lenovo/TB311FU/proprietary/product/etc/sysconfig/lenovo_product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lenovo_product.xml \
+    vendor/lenovo/TB311FU/proprietary/product/media/audio/ui/Dock.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/Dock.ogg \
+    vendor/lenovo/TB311FU/proprietary/product/media/audio/ui/Undock.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/Undock.ogg \
+    vendor/lenovo/TB311FU/proprietary/odm/etc/camera/lenovo_sensor_calib.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/lenovo_sensor_calib.bin \
+    vendor/lenovo/TB311FU/proprietary/odm/etc/camera/tuning_params.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/tuning_params.bin \
+    vendor/lenovo/TB311FU/proprietary/odm/etc/display/panel_timing_tb311fu.xml:$(TARGET_COPY_OUT_ODM)/etc/display/panel_timing_tb311fu.xml
 
 # Proprietary packages to install
 PRODUCT_PACKAGES += \
