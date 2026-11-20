@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lenovo Tab M11 (TB311FU / 'poplar') Deep Dynamic Partition Modding Tool
+Lenovo Tab with Clear Case (TB311FU / 'poplar') Deep Dynamic Partition Modding Tool
 Automated EROFS extraction, hardware asset injection, and LZ4 recompilation for /vendor.
 """
 

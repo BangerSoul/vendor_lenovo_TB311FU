@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-    Lenovo Tab M11 (TB311FU, poplar) MediaTek MT6769 Audio Policy Configuration
+    Lenovo Tab with Clear Case (TB311FU, poplar) MediaTek MT6769 Audio Policy Configuration
     Hardware: Discrete Quad-Speaker Array + Dolby Atmos DSP
     HAL Version: AIDL 3.0 (android.hardware.audio.service-aidl.mediatek)
     Enforces AUDIO_CHANNEL_OUT_QUAD (FL, FR, RL, RR) routing and Global Speaker DRC

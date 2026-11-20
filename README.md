@@ -1,16 +1,16 @@
 # vendor_lenovo_TB311FU
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Target: Lenovo Tab M11](https://img.shields.io/badge/Device-Lenovo%20Tab%20M11%20(TB311FU)-orange.svg)](https://www.lenovo.com)
+[![Target: Lenovo Tab with Clear Case](https://img.shields.io/badge/Device-Lenovo%20Tab%20with%20Clear%20Case%20(TB311FU)-orange.svg)](https://www.lenovo.com)
 [![Branch: main](https://img.shields.io/badge/Branch-main%20%2F%20lineage--23.2-success.svg)](https://github.com/BangerSoul/vendor_lenovo_TB311FU)
 
-Proprietary vendor blobs, hardware configuration overlays, audio policies, active pen digitizer configs, and dynamic partition tools for the **Lenovo Tab M11** (`TB311FU`, codename `poplar`).
+Proprietary vendor blobs, hardware configuration overlays, audio policies, active pen digitizer configs, and dynamic partition tools for the **Lenovo Tab with Clear Case** (`TB311FU`, codename `poplar`).
 
 ---
 
-## 🌐 Lenovo Tab M11 (TB311FU / poplar) Open-Source Bringup Ecosystem
+## 🌐 Lenovo Tab with Clear Case (TB311FU / poplar) Open-Source Bringup Ecosystem
 
-The complete open-source software stack for the **Lenovo Tab M11** (`TB311FU`, codename `poplar`, MediaTek Helio G88 / MT8786 / MT6768) is organized into five specialized, interconnected repositories under [@BangerSoul](https://github.com/BangerSoul):
+The complete open-source software stack for the **Lenovo Tab with Clear Case** (`TB311FU`, codename `poplar`, MediaTek Helio G88 / MT8786 / MT6768) is organized into five specialized, interconnected repositories under [@BangerSoul](https://github.com/BangerSoul):
 
 | Repository | Role & Subsystem Scope | Target Stack | Key Deliverables & Artifacts | Badges & Links |
 | :--- | :--- | :--- | :--- | :---: |

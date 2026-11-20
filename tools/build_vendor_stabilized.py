@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lenovo Tab M11 (TB311FU / 'poplar') EROFS Vendor Image Stabilizer.
+Lenovo Tab with Clear Case (TB311FU / 'poplar') EROFS Vendor Image Stabilizer.
 Deconstructs stock vendor_a via fsck.erofs, injects active pen IDCs,
 discrete quad-audio policies, Dolby Atmos effect chains, RRO framework overlay,
 and re-compiles vendor_stabilized.img with mkfs.erofs -zlz4 and OEM SELinux contexts.
@@ -224,7 +224,7 @@ def patch_build_prop_file(build_prop_path: str, props_to_inject: Dict[str, str])
     # Reconstruct clean build.prop
     output_lines: List[str] = [
         "# ==============================================================================\n",
-        "# Lenovo Tab M11 (TB311FU / poplar) Stabilized Vendor Properties\n",
+        "# Lenovo Tab with Clear Case (TB311FU / poplar) Stabilized Vendor Properties\n",
         "# ==============================================================================\n",
     ]
     for k in ordered_keys:
@@ -604,7 +604,7 @@ class VendorStabilizerPipeline:
 # CLI Entrypoint
 # ==============================================================================
 def main():
-    parser = argparse.ArgumentParser(description="Lenovo Tab M11 EROFS Vendor Image Stabilizer")
+    parser = argparse.ArgumentParser(description="Lenovo Tab with Clear Case EROFS Vendor Image Stabilizer")
     parser.add_argument("--serial", type=str, default=None, help="Specific ADB device serial (e.g., HNQ09EZD)")
     parser.add_argument("--gsi-suite", type=str, default=DEFAULT_GSI_SUITE, help="Path to gsi_suite reference directory")
     parser.add_argument("--output", type=str, default=None, help="Output vendor_stabilized.img path")
