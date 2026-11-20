@@ -21,7 +21,10 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     vendor/lenovo/TB311FU/proprietary/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
-    vendor/lenovo/TB311FU/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
+    vendor/lenovo/TB311FU/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    vendor/lenovo/TB311FU/proprietary/odm/etc/camera/lenovo_sensor_calib.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/lenovo_sensor_calib.bin \
+    vendor/lenovo/TB311FU/proprietary/odm/etc/camera/tuning_params.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/tuning_params.bin \
+    vendor/lenovo/TB311FU/proprietary/odm/etc/display/panel_timing_tb311fu.xml:$(TARGET_COPY_OUT_ODM)/etc/display/panel_timing_tb311fu.xml
 
 # Proprietary packages to install
 PRODUCT_PACKAGES += \
